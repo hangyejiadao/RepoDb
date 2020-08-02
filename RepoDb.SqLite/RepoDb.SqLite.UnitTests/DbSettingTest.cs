@@ -1,5 +1,5 @@
-﻿using Microsoft.Data.Sqlite;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System.Data.SQLite;
 
 namespace RepoDb.SqLite.UnitTests
 {
@@ -16,7 +16,7 @@ namespace RepoDb.SqLite.UnitTests
         public void TestSqLiteDbSettingAreTableHintsSupportedProperty()
         {
             // Setup
-            var setting = DbSettingMapper.Get<SqliteConnection>();
+            var setting = DbSettingMapper.Get<SQLiteConnection>();
 
             // Assert
             Assert.IsFalse(setting.AreTableHintsSupported);
@@ -26,7 +26,7 @@ namespace RepoDb.SqLite.UnitTests
         public void TestSqLiteDbSettingAverageableTypeProperty()
         {
             // Setup
-            var setting = DbSettingMapper.Get<SqliteConnection>();
+            var setting = DbSettingMapper.Get<SQLiteConnection>();
 
             // Assert
             Assert.AreEqual(typeof(double), setting.AverageableType);
@@ -36,7 +36,7 @@ namespace RepoDb.SqLite.UnitTests
         public void TestSqLiteDbSettingClosingQuoteProperty()
         {
             // Setup
-            var setting = DbSettingMapper.Get<SqliteConnection>();
+            var setting = DbSettingMapper.Get<SQLiteConnection>();
 
             // Assert
             Assert.AreEqual("]", setting.ClosingQuote);
@@ -46,7 +46,7 @@ namespace RepoDb.SqLite.UnitTests
         public void TestSqLiteDbSettingDefaultSchemaProperty()
         {
             // Setup
-            var setting = DbSettingMapper.Get<SqliteConnection>();
+            var setting = DbSettingMapper.Get<SQLiteConnection>();
 
             // Assert
             Assert.IsNull(setting.DefaultSchema);
@@ -56,7 +56,7 @@ namespace RepoDb.SqLite.UnitTests
         public void TestSqLiteDbSettingIsDirectionSupportedSupportedProperty()
         {
             // Setup
-            var setting = DbSettingMapper.Get<SqliteConnection>();
+            var setting = DbSettingMapper.Get<SQLiteConnection>();
 
             // Assert
             Assert.IsFalse(setting.IsDirectionSupported);
@@ -66,7 +66,7 @@ namespace RepoDb.SqLite.UnitTests
         public void TestSqLiteDbSettingIsExecuteReaderDisposableProperty()
         {
             // Setup
-            var setting = DbSettingMapper.Get<SqliteConnection>();
+            var setting = DbSettingMapper.Get<SQLiteConnection>();
 
             // Assert
             Assert.IsFalse(setting.IsExecuteReaderDisposable);
@@ -76,7 +76,7 @@ namespace RepoDb.SqLite.UnitTests
         public void TestSqLiteDbSettingIsMultiStatementExecutableProperty()
         {
             // Setup
-            var setting = DbSettingMapper.Get<SqliteConnection>();
+            var setting = DbSettingMapper.Get<SQLiteConnection>();
 
             // Assert
             Assert.IsTrue(setting.IsMultiStatementExecutable);
@@ -86,7 +86,7 @@ namespace RepoDb.SqLite.UnitTests
         public void TestSqLiteDbSettingIsUseUpsertProperty()
         {
             // Setup
-            var setting = DbSettingMapper.Get<SqliteConnection>();
+            var setting = DbSettingMapper.Get<SQLiteConnection>();
 
             // Assert
             Assert.IsFalse(setting.IsUseUpsert);
@@ -96,7 +96,7 @@ namespace RepoDb.SqLite.UnitTests
         public void TestSqLiteDbSettingOpeningQuoteProperty()
         {
             // Setup
-            var setting = DbSettingMapper.Get<SqliteConnection>();
+            var setting = DbSettingMapper.Get<SQLiteConnection>();
 
             // Assert
             Assert.AreEqual("[", setting.OpeningQuote);
@@ -106,7 +106,7 @@ namespace RepoDb.SqLite.UnitTests
         public void TestSqLiteDbSettingParameterPrefixProperty()
         {
             // Setup
-            var setting = DbSettingMapper.Get<SqliteConnection>();
+            var setting = DbSettingMapper.Get<SQLiteConnection>();
 
             // Assert
             Assert.AreEqual("@", setting.ParameterPrefix);

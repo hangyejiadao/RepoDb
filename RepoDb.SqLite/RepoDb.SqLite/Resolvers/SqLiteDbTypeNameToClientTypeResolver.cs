@@ -13,7 +13,7 @@ namespace RepoDb.Resolvers
         /// </summary>
         /// <param name="dbTypeName">The name of the database type.</param>
         /// <returns>The equivalent .NET CLR type.</returns>
-        public virtual Type Resolve(string dbTypeName)
+        private Type ResolveMDS(string dbTypeName)
         {
             if (dbTypeName == null)
             {
@@ -67,7 +67,12 @@ namespace RepoDb.Resolvers
             }
         }
 
-        private Type ResolveSDS(string dbTypeName)
+        /// <summary>
+        /// Returns the equivalent .NET CLR Types of the Database Type.
+        /// </summary>
+        /// <param name="dbTypeName">The name of the database type.</param>
+        /// <returns>The equivalent .NET CLR type.</returns>
+        public virtual Type Resolve(string dbTypeName)
         {
             if (dbTypeName == null)
             {

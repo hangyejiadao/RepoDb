@@ -62,7 +62,7 @@ namespace RepoDb.SqLite.UnitTests.Resolvers
             var result = resolver.Resolve("BOOLEAN");
 
             // Assert
-            Assert.AreEqual(typeof(string), result);
+            Assert.AreEqual(typeof(long), result);
         }
 
         [TestMethod]
@@ -127,7 +127,7 @@ namespace RepoDb.SqLite.UnitTests.Resolvers
             var result = resolver.Resolve("DATE");
 
             // Assert
-            Assert.AreEqual(typeof(string), result);
+            Assert.AreEqual(typeof(DateTime), result);
         }
 
         [TestMethod]
@@ -140,7 +140,7 @@ namespace RepoDb.SqLite.UnitTests.Resolvers
             var result = resolver.Resolve("DATETIME");
 
             // Assert
-            Assert.AreEqual(typeof(string), result);
+            Assert.AreEqual(typeof(DateTime), result);
         }
 
         [TestMethod]
@@ -153,7 +153,7 @@ namespace RepoDb.SqLite.UnitTests.Resolvers
             var result = resolver.Resolve("TIME");
 
             // Assert
-            Assert.AreEqual(typeof(string), result);
+            Assert.AreEqual(typeof(DateTime), result);
         }
 
         [TestMethod]
@@ -166,7 +166,7 @@ namespace RepoDb.SqLite.UnitTests.Resolvers
             var result = resolver.Resolve("DECIMAL");
 
             // Assert
-            Assert.AreEqual(typeof(long), result);
+            Assert.AreEqual(typeof(decimal), result);
         }
 
         [TestMethod]
@@ -179,7 +179,7 @@ namespace RepoDb.SqLite.UnitTests.Resolvers
             var result = resolver.Resolve("NUMERIC");
 
             // Assert
-            Assert.AreEqual(typeof(long), result);
+            Assert.AreEqual(typeof(decimal), result);
         }
 
         [TestMethod]
@@ -218,7 +218,7 @@ namespace RepoDb.SqLite.UnitTests.Resolvers
             var result = resolver.Resolve("INT");
 
             // Assert
-            Assert.AreEqual(typeof(long), result);
+            Assert.AreEqual(typeof(int), result);
         }
 
         [TestMethod]
@@ -231,7 +231,7 @@ namespace RepoDb.SqLite.UnitTests.Resolvers
             var result = resolver.Resolve("NONE");
 
             // Assert
-            Assert.AreEqual(typeof(string), result);
+            Assert.AreEqual(typeof(object), result);
         }
 
         [TestMethod]

@@ -165,10 +165,10 @@ namespace RepoDb.SqLite.IntegrationTests
                 {
                     ColumnBigInt = i,
                     ColumnBlob = Encoding.Default.GetBytes($"ColumnBlob:{i}"),
-                    ColumnBoolean = "true",
+                    ColumnBoolean = true,
                     ColumnChar = "C",
-                    ColumnDate = EpocDate.ToString(DATE_FORMAT),
-                    ColumnDateTime = DateTime.SpecifyKind(DateTime.UtcNow, DateTimeKind.Unspecified).ToString(DATE_FORMAT),
+                    ColumnDate = EpocDate,
+                    ColumnDateTime = DateTime.SpecifyKind(DateTime.UtcNow, DateTimeKind.Unspecified),
                     ColumnDecimal = Convert.ToInt64(i),
                     ColumnDouble = Convert.ToDouble(i),
                     ColumnInt = i,
@@ -178,7 +178,7 @@ namespace RepoDb.SqLite.IntegrationTests
                     ColumnReal = (float)i,
                     ColumnString = $"ColumnString:{i}",
                     ColumnText = $"ColumnText:{i}",
-                    ColumnTime = DateTime.SpecifyKind(DateTime.UtcNow, DateTimeKind.Unspecified).ToString(DATE_FORMAT),
+                    ColumnTime = DateTime.SpecifyKind(DateTime.UtcNow, DateTimeKind.Unspecified),
                     ColumnVarChar = $"ColumnVarChar:{i}"
                 });
             }
@@ -193,10 +193,10 @@ namespace RepoDb.SqLite.IntegrationTests
         {
             table.ColumnBigInt = long.MaxValue;
             table.ColumnBlob = Encoding.UTF32.GetBytes(Guid.NewGuid().ToString());
-            table.ColumnBoolean = "true";
+            table.ColumnBoolean = true;
             table.ColumnChar = char.Parse("C").ToString();
-            table.ColumnDate = DateTime.SpecifyKind(DateTime.UtcNow, DateTimeKind.Unspecified).Date.ToString(DATE_FORMAT);
-            table.ColumnDateTime = DateTime.SpecifyKind(DateTime.UtcNow, DateTimeKind.Unspecified).ToString(DATE_FORMAT);
+            table.ColumnDate = DateTime.SpecifyKind(DateTime.UtcNow, DateTimeKind.Unspecified).Date;
+            table.ColumnDateTime = DateTime.SpecifyKind(DateTime.UtcNow, DateTimeKind.Unspecified);
             table.ColumnDecimal = Randomizer.Next(1000000);
             table.ColumnDouble = Convert.ToDouble(Randomizer.Next(1000000));
             table.ColumnInt = Randomizer.Next(1000000);
@@ -205,7 +205,7 @@ namespace RepoDb.SqLite.IntegrationTests
             table.ColumnReal = Convert.ToSingle(Randomizer.Next(1000000));
             table.ColumnString = $"{table.ColumnString} - Updated with {Guid.NewGuid().ToString()}";
             table.ColumnText = $"{table.ColumnText} - Updated with {Guid.NewGuid().ToString()}";
-            table.ColumnTime = DateTime.SpecifyKind(DateTime.UtcNow, DateTimeKind.Unspecified).ToString(DATE_FORMAT);
+            table.ColumnTime = DateTime.SpecifyKind(DateTime.UtcNow, DateTimeKind.Unspecified);
             table.ColumnVarChar = $"{table.ColumnVarChar} - Updated with {Guid.NewGuid().ToString()}";
         }
 
@@ -224,7 +224,7 @@ namespace RepoDb.SqLite.IntegrationTests
                     Id = (long)(i + 1),
                     ColumnBigInt = (long)i,
                     ColumnBlob = Encoding.Default.GetBytes($"ColumnBlob:{i}"),
-                    ColumnBoolean = "true",
+                    ColumnBoolean = true,
                     ColumnChar = "C",
                     ColumnDate = EpocDate,
                     ColumnDateTime = DateTime.SpecifyKind(DateTime.UtcNow, DateTimeKind.Unspecified),
@@ -252,7 +252,7 @@ namespace RepoDb.SqLite.IntegrationTests
         {
             table.ColumnBigInt = long.MaxValue;
             table.ColumnBlob = Encoding.UTF32.GetBytes(Guid.NewGuid().ToString());
-            table.ColumnBoolean = "true";
+            table.ColumnBoolean = true;
             table.ColumnChar = char.Parse("C").ToString();
             table.ColumnDate = DateTime.SpecifyKind(DateTime.UtcNow, DateTimeKind.Unspecified).Date;
             table.ColumnDateTime = DateTime.SpecifyKind(DateTime.UtcNow, DateTimeKind.Unspecified);
@@ -287,10 +287,10 @@ namespace RepoDb.SqLite.IntegrationTests
                     Id = (long)(i + 1),
                     ColumnBigInt = (long)i,
                     ColumnBlob = Encoding.Default.GetBytes($"ColumnBlob:{i}"),
-                    ColumnBoolean = "true",
+                    ColumnBoolean = true,
                     ColumnChar = "C",
-                    ColumnDate = EpocDate.ToString(DATE_FORMAT),
-                    ColumnDateTime = DateTime.SpecifyKind(DateTime.UtcNow, DateTimeKind.Unspecified).ToString(DATE_FORMAT),
+                    ColumnDate = EpocDate,
+                    ColumnDateTime = DateTime.SpecifyKind(DateTime.UtcNow, DateTimeKind.Unspecified),
                     ColumnDecimal = i,
                     ColumnDouble = Convert.ToDouble(i),
                     ColumnInt = i,
@@ -300,7 +300,7 @@ namespace RepoDb.SqLite.IntegrationTests
                     ColumnReal = (float)i,
                     ColumnString = $"ColumnString:{i}",
                     ColumnText = $"ColumnText:{i}",
-                    ColumnTime = DateTime.SpecifyKind(DateTime.UtcNow, DateTimeKind.Unspecified).ToString(DATE_FORMAT),
+                    ColumnTime = DateTime.SpecifyKind(DateTime.UtcNow, DateTimeKind.Unspecified),
                     ColumnVarChar = $"ColumnVarChar:{i}"
                 });
             }
@@ -315,10 +315,10 @@ namespace RepoDb.SqLite.IntegrationTests
         {
             table.ColumnBigInt = long.MaxValue;
             table.ColumnBlob = Encoding.UTF32.GetBytes(Guid.NewGuid().ToString());
-            table.ColumnBoolean = "true";
+            table.ColumnBoolean = true;
             table.ColumnChar = char.Parse("C").ToString();
-            table.ColumnDate = DateTime.SpecifyKind(DateTime.UtcNow, DateTimeKind.Unspecified).Date.ToString(DATE_FORMAT);
-            table.ColumnDateTime = DateTime.SpecifyKind(DateTime.UtcNow, DateTimeKind.Unspecified).ToString(DATE_FORMAT);
+            table.ColumnDate = DateTime.SpecifyKind(DateTime.UtcNow, DateTimeKind.Unspecified).Date;
+            table.ColumnDateTime = DateTime.SpecifyKind(DateTime.UtcNow, DateTimeKind.Unspecified);
             table.ColumnDecimal = Randomizer.Next(1000000);
             table.ColumnDouble = Convert.ToDouble(Randomizer.Next(1000000));
             table.ColumnInt = Randomizer.Next(1000000);
@@ -327,7 +327,7 @@ namespace RepoDb.SqLite.IntegrationTests
             table.ColumnReal = Convert.ToSingle(Randomizer.Next(1000000));
             table.ColumnString = $"{table.ColumnString} - Updated with {Guid.NewGuid().ToString()}";
             table.ColumnText = $"{table.ColumnText} - Updated with {Guid.NewGuid().ToString()}";
-            table.ColumnTime = DateTime.SpecifyKind(DateTime.UtcNow, DateTimeKind.Unspecified).ToString(DATE_FORMAT);
+            table.ColumnTime = DateTime.SpecifyKind(DateTime.UtcNow, DateTimeKind.Unspecified);
             table.ColumnVarChar = $"{table.ColumnVarChar} - Updated with {Guid.NewGuid().ToString()}";
         }
 
@@ -346,7 +346,7 @@ namespace RepoDb.SqLite.IntegrationTests
                     Id = (long)(i + 1),
                     ColumnBigInt = i,
                     ColumnBlob = Encoding.Default.GetBytes($"ColumnBlob:{i}"),
-                    ColumnBoolean = "true",
+                    ColumnBoolean = true,
                     ColumnChar = "C",
                     ColumnDate = EpocDate,
                     ColumnDateTime = DateTime.SpecifyKind(DateTime.UtcNow, DateTimeKind.Unspecified),
@@ -374,7 +374,7 @@ namespace RepoDb.SqLite.IntegrationTests
         {
             table.ColumnBigInt = long.MaxValue;
             table.ColumnBlob = Encoding.UTF32.GetBytes(Guid.NewGuid().ToString());
-            table.ColumnBoolean = "true";
+            table.ColumnBoolean = true;
             table.ColumnChar = char.Parse("C").ToString();
             table.ColumnDate = DateTime.SpecifyKind(DateTime.UtcNow, DateTimeKind.Unspecified).Date;
             table.ColumnDateTime = DateTime.SpecifyKind(DateTime.UtcNow, DateTimeKind.Unspecified);

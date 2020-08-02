@@ -1,11 +1,11 @@
-﻿using Microsoft.Data.Sqlite;
-using RepoDb.Extensions;
+﻿using RepoDb.Extensions;
 using RepoDb.Interfaces;
 using RepoDb.Resolvers;
 using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Common;
+using System.Data.SQLite;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -16,7 +16,7 @@ namespace RepoDb.DbHelpers
     /// </summary>
     public sealed class SqLiteDbHelper : IDbHelper
     {
-        private IDbSetting m_dbSetting = DbSettingMapper.Get<SqliteConnection>();
+        private IDbSetting m_dbSetting = DbSettingMapper.Get<SQLiteConnection>();
 
         /// <summary>
         /// Creates a new instance of <see cref="SqLiteDbHelper"/> class.

@@ -1,9 +1,9 @@
-﻿using Microsoft.Data.Sqlite;
+﻿using System.Data.SQLite;
 
 namespace RepoDb.DbSettings
 {
     /// <summary>
-    /// A setting class used for <see cref="SqliteConnection"/> data provider.
+    /// A setting class used for <see cref="SQLiteConnection"/> data provider.
     /// </summary>
     public sealed class SqLiteDbSetting : BaseDbSetting
     {
